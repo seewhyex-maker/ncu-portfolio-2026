@@ -1,44 +1,101 @@
-# 系统文件
-.DS_Store
-Thumbs.db
-Desktop.ini
+# ============================================================
+#  南昌大学 · 护理专业个人作品集  |  .gitignore
+#  作用：告诉 Git「哪些文件不需要纳入版本管理」
+#  语法：# 开头是注释；结尾 / 表示目录；* 是通配符；! 表示例外
+# ============================================================
 
-# 编辑器与IDE
+# ---------- 系统文件 ----------
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*~
+
+# ---------- 编辑器与 IDE ----------
 .vscode/
 .idea/
+*.iml
+.vs/
 *.swp
 *.swo
 *.tmp
+*.temp
 
-# Python
+# ---------- Python ----------
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 venv/
 .venv/
-.env
+env/
+.conda/
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
 pip-log.txt
 
-# Node / 前端
+# ---------- Node / 前端 ----------
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-dist/
-build/
+pnpm-debug.log*
+.cache/
+.parcel-cache/
+coverage/
+*.tsbuildinfo
 
-# Java / Maven / Gradle
+# ---------- Java / Maven / Gradle ----------
 target/
+out/
 .gradle/
 *.class
 *.jar
 *.war
 
-# 其他常见生成文件
+# ---------- C / C++ ----------
+*.o
+*.obj
+*.exe
+*.out
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+
+# ---------- 数据 / 生成文件 ----------
 *.log
+*.sqlite
 *.sqlite3
 *.db
+*.mdb
+*.bak
+*.orig
+*.rej
 
-# 本地配置
+# ---------- 本地配置 ----------
 *.local
+
+# ---------- 环境变量 / 密钥（重要！切勿上传） ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+*.token
+
+# ---------- 压缩包 / 大体积素材 ----------
+*.zip
+*.rar
+*.7z
+*.tar.gz
+!assets/**/*.zip
